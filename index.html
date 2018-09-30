@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>pudding</title>
+    <style>
+      body{background: #DB9735}
+      p {font-size: 5em; font-weight: lighter; position: absolute;}
+      .city {text-align: center; margin-top: 370px; margin-left: 280px; position: absolute;}
+      #sample{width: 100px; height: 100px; position: absolute;}
+      #sun {width: 100px; height: 100px; border-radius: 50%; background: red; position: absolute; top: 270px; left: 1080px; box-shadow: 0 0 40px #FF5500; cursor: pointer;
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;}
+      .text {position: absolute; top: -70px;}
+
+      @keyframes blink {
+       
+        from {background-color: red; box-shadow: 0 0 0px yellow;}
+        to {background-color: yellow; box-shadow: 0px 0px 800px #FF5500;}
+      }
+     
+    </style>
+
+  </head>
+  
+  <body>
+
+    <div id="sample">
+    <a href="night.html">
+      <div id="sun"></div>
+    </a>
+    </div>
+
+    <div class="city">
+      <img src="pupu.png">
+    </div>
+
+    <p id="demo"></p>
+
+
+  </body>
+  <script>
+    var x = document.getElementById("sun");
+    x.addEventListener("mouseover", myFunction);
+    x.addEventListener("click", mySecondFunction);
+    x.addEventListener("mouseout", myThirdFunction);
+
+    function myFunction() {
+        document.getElementById("demo").innerHTML += "아파트에서<br>";
+    }
+
+    function mySecondFunction() {
+        document.getElementById("demo").innerHTML += "일들<br>";
+    }
+
+    function myThirdFunction() {
+        document.getElementById("demo").innerHTML += "일어나는<br>";
+    }
+  </script>
+</html>

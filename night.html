@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>pudding</title>
+    <style>
+      body{background: #3F12A0;}
+      p {font-size: 2em; font-weight: bold; position: absolute;}
+      .city {text-align: center; margin-top: 370px; margin-left: 280px; position: absolute;}
+      .city img{display: block; }
+      #sample{width: 100px; height: 100px; position: absolute;}
+      #sun {width: 100px; height: 100px; border-radius: 50%; background: yellow; position: absolute; top: 270px; left: 1080px; box-shadow: 0 0 40px #FF5500; cursor: pointer;
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;}
+      #red{position: absolute; width: 10px; height: 17px; top: 423px; left: 802px; cursor: pointer; border-radius: 50%;
+        animation-name: window;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;}
+      #orange{position: absolute; width: 10px; height: 18px; top: 420px; left: 817px; cursor: pointer;
+        animation-name: window;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        }
+      #secorange{position: absolute; width: 300px; height: 300px; top: 600px; left: 600px; border-radius: 50%;
+        animation-name: window;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;}
+      #green{position: absolute; width: 30px; height: 20px; top: 460px; left: 842px; cursor: pointer;
+        animation-name: window;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;}
+      #secgreen{position: absolute; width: 400px; height: 300px; top: 200px; left: 600px; border-radius: 50%;
+        animation-name: window, bang;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;}
+      #blue{position: absolute; width: 6px; height: 26px; top: 448px; left: 899px; cursor: pointer;
+        animation-name: window;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;}
+      #secblue{position: absolute; width: 70px; height: 50px; top: 730px; left: 950px; cursor: pointer;  perspective: 90px;
+        animation-name: window, bing;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;}
+      #pink{position: absolute; width: 8px; height: 16px; top: 576px; left: 805px; cursor: pointer;
+        animation-name: window;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;}
+      #secpink{position: absolute; width: 1300px; height: 800px; top: 100px; left: 200px; cursor: pointer;
+        animation-name: window;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;}
+      .text {position: absolute; top: -70px;}
+
+      @keyframes blink {
+        from {background-color: yellow; box-shadow: 0 0 0px #00FF85;}
+        to {background-color: #00FF85; box-shadow: 0px 0px 500px yellow;}
+      }
+
+      @keyframes bing {
+        from {transform: rotate3d(0,0,0,0deg);}
+        to {transform: rotate3d(1,1,1,720deg);}
+      }
+
+      @keyframes bang {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+      }
+     
+      @keyframes window {
+        0%{opacity: 1.0}
+        50%{opacity: 0.2}
+        100%{opacity: 1.0}
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="sample">
+    <a href="index.html">
+      <div id="sun"></div>
+    </a>
+    </div>
+
+    <div class="city">
+      <img src="pupu.png">
+    </div>
+
+    <img src="test1.png" id="red">
+
+    <img src="test2.png" id="orange">
+
+    <img src="test3.png" id="green">
+
+    <img src="test4.png" id="blue">
+
+    <img src="test5.png" id="pink">
+    
+
+    <div class="text"></div>
+
+    <p id="demo"></p>
+    <audio id="testMusic">
+      <source src="fifth.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      red.onclick = function(){
+        red.setAttribute("src","first.gif");
+        red.style.width = "500px";
+        red.style.height = "300px";
+        red.style.animationPlayState = "running";
+        red.style.position = "top=300px";
+      }
+
+      orange.onclick = function(){
+        orange.setAttribute("src","second.gif");
+        orange.setAttribute("id","secorange");
+      }
+
+      green.onclick = function(){
+        green.setAttribute("src","third.gif");
+        green.setAttribute("id","secgreen");
+      }
+
+      blue.onclick = function(){
+        blue.setAttribute("src","fourth.gif");
+        blue.setAttribute("id","secblue");
+      }
+
+      pink.onclick = function(){
+        pink.setAttribute("src","fifth.gif");
+        pink.setAttribute("id","secpink");
+        testMusic.play();
+      }
+
+    var x = document.getElementById("sun");
+    x.addEventListener("mouseover", myFunction);
+    x.addEventListener("click", mySecondFunction);
+    x.addEventListener("mouseout", myThirdFunction);
+
+    function myFunction() {
+        document.getElementById("demo").innerHTML += "무지개순서<br>";
+    }
+
+    function mySecondFunction() {
+        document.getElementById("demo").innerHTML += "따란~~굳잡~~<br>";
+    }
+
+    function myThirdFunction() {
+        document.getElementById("demo").innerHTML += "맞춰서클릭<br>";
+    }
+     
+    </script>
+
+  </body>
+
+</html>
